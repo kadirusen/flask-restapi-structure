@@ -10,7 +10,7 @@
 git clone https://github.com/kadirusen/flask-restapi-structure.git
 ```
 # Steps For Run the application
-# 1.  Docker Compose Build
+# Docker Compose Build
 
 ```
 $ cd flask-restapi-structure
