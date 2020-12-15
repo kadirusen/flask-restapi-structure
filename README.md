@@ -1,4 +1,4 @@
-#### PYTHON FLASK RESTX WITH JWT - USER WEB SERVICE
+# PYTHON FLASK RESTX WITH JWT - USER WEB SERVICE
 
 - Flask-RESTPlus, Flask Blueprint, MongoDB, Docker
 
@@ -7,10 +7,10 @@
 # clone this repo
 
 ```
-git clone https://github.com/kadirusen/applynow.git
+git clone https://github.com/kadirusen/flask-restapi-structure.git
 ```
 # Steps For Run the application
-## 1.  Docker Compose Build
+# 1.  Docker Compose Build
 
 ```
 $ cd flask-restapi-structure
