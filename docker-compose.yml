@@ -1,0 +1,36 @@
+version: "3"
+networks:
+  flask.api.app-dev:
+    driver: bridge
+
+
+services:
+  flask.api.app:
+    image: flask-api-app
+    build:
+      context: "."
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    depends_on:
+      - "mongodb"
+    environment:
+      - ENV=Development
+    volumes:
+      - .:/code
+    networks:
+      - flask.api.app-dev
+
+  mongodb:
+    image: mongo
+    container_name: flask-api-mongodb
+    command: mongod --port 27018
+    ports:
+      - "27018:27018"
+    volumes:
+      - db-data:/data/db
+    networks:
+      - flask.api.app-dev
+
+volumes:
+  db-data:
