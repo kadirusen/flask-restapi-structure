@@ -1,6 +1,6 @@
 # PYTHON FLASK RESTX WITH JWT - USER WEB SERVICE
 
-- Python 3, Flask-RESTPlus, Flask Blueprint, MongoDB, Docker
+- Python 3, Flask-RESTPlus, Flask Blueprint, MongoDB, Docker, Nginx
 
 # Getting Started
 
