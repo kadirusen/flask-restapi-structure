@@ -19,7 +19,7 @@ services:
     volumes:
       - .:/code
     networks:
-      - flask.api.app-dev
+       - flask.api.app-dev
 
   mongodb:
     image: mongo
@@ -31,6 +31,18 @@ services:
       - db-data:/data/db
     networks:
       - flask.api.app-dev
+
+  nginx:
+    image: nginx
+    container_name: nginx
+    depends_on:
+      - flask.api.app
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    networks:
+      - flask.api.app-dev
+    ports:
+      - "80:80"
 
 volumes:
   db-data:
